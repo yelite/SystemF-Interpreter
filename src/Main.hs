@@ -155,7 +155,7 @@ validate term = do
        putStrLn ""
        putStrLn "The original type: "
        print original_type
-       putStrLn " The result type: "
+       putStrLn "The result type: "
        print result_type
        if (reduce term) == (reduce result)
          then putStrLn "The interpreted term is equivalent to the original one"

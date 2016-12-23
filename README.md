@@ -19,7 +19,7 @@ The representation:
 
 The original type:
 ∀a. ((∀t. t -> t) -> a) -> a
- The result type:
+The result type:
 ∀a. ((∀t. t -> t) -> a) -> a
 The interpreted term is equivalent to the original one
 ```
