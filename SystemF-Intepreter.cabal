@@ -1,0 +1,21 @@
+name:                SystemF-Intepreter
+version:             0.1.0.0
+synopsis:            Self-interpreter for System F
+description:         Please see README.md
+homepage:            https://github.com/yelite/SystemF-Intepreter#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Lite Ye
+maintainer:          lye@cs.umass.edu
+copyright:           2016 Lite Ye
+category:            Theory
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable SystemF-Intepreter
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , containers
