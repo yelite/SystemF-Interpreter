@@ -32,4 +32,4 @@ The interpreted term is equivalent to the original one
 ## Description
 There are function `reduce` for reduction, `typecheck` for type checking, `quote` for generating representation. The function `validate` goes through the whole process. It takes a term and check if the result from `unquote` has the same type and is equivalent to the original term.
 
-There is no parser so the only way is writing AST directly. System F function `quote` and `identity` are already here. You can combine them to get more complicated function, or you can write your own.
+There is no parser so the only way is writing AST directly. System F function `unquote` and `identity` are already here. You can combine them to get more complicated function, or you can write your own.
