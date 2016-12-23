@@ -13,7 +13,6 @@ main = validate (App (TApp identity (typecheck unquote)) unquote)
 ```
 
 ```
-*Main> main
 The representation:
 λid:(∀t. t -> t). id ((∀a. ((∀t. t -> t) -> a) -> a) -> (∀a. ((∀t. t -> t) -> a) -> a)) id (∀t. t -> t) (Λt. λx:t. x) (∀a. ((∀t. t -> t) -> a) -> a) (Λa. λq:(∀t. t -> t) -> a. id ((∀t. t -> t) -> a) q (Λt. λx:t. x))
 
@@ -21,6 +20,12 @@ The original type:
 ∀a. ((∀t. t -> t) -> a) -> a
 The result type:
 ∀a. ((∀t. t -> t) -> a) -> a
+
+The original normal form:
+Λa. λq:(∀t. t -> t) -> a. q (Λt. λx:t. x)
+The result normal form:
+Λa. λq:(∀t. t -> t) -> a. q (Λt. λx:t. x)
+
 The interpreted term is equivalent to the original one
 ```
 

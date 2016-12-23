@@ -149,6 +149,8 @@ validate term = do
       representation = quote term
       result = interpret original_type representation
       result_type = typecheck result
+      original_nf = reduce term
+      result_nf = reduce result
     in
     do putStrLn "The representation: "
        print representation
@@ -157,7 +159,13 @@ validate term = do
        print original_type
        putStrLn "The result type: "
        print result_type
-       if (reduce term) == (reduce result)
+       putStrLn ""
+       putStrLn "The original normal form: "
+       print original_nf
+       putStrLn "The result normal form: "
+       print result_nf
+       putStrLn " "
+       if original_nf == result_nf
          then putStrLn "The interpreted term is equivalent to the original one"
          else putStrLn "The interpreted term is different from the original one"
 
