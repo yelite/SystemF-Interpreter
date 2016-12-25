@@ -130,7 +130,7 @@ _quote m (App term0 term1) = App (App (TApp (V "id") t) q0) q1
         q1 = _quote m term1
 _quote m (TFunc v term) = TFunc v (_quote m term)
 _quote m (TApp term t1) = TApp (App (TApp (V "id") t0) q) t1
-  where t0 = typecheck term
+  where t0 = _typecheck m term
         q = _quote m term
 _quote m (V v) = (V v)
 
